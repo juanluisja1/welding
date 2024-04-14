@@ -5,13 +5,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <!-- 
     - primary meta tags
   -->
   <title>Exact welding</title>
-  <meta name="title" content="Angela - Style Setter & Hair Cuts">
-  <meta name="Style Setter & Hair Cuts by Angela" content="Angel's Barber & Styles website">
+  <meta name="title" content="Welding - Presion and Quality">
+  <meta name="ExactWelding" content="ExactWelding's website">
 
   <!-- 
     - favicon
@@ -40,7 +40,22 @@
   <!-- 
    preload images
   -->
-  <link rel="preload" as="image" href="img/exact-welding.webp" type="image/webp" >
+  <link rel="preload" as="script" href="./js/email.js" type="text" >
+
+ <!-- 
+  email server script
+ -->
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<!-- <script src="./js/email.js"></script>
+<script type="html/javascript">
+   (function(){
+      emailjs.init({
+        publicKey:"Z_uXQYz9gNwClH_O5" ,
+      });
+   })();
+</script> -->
 
 </head>
 
@@ -200,12 +215,9 @@
           <h1 class="h1 hero-title"> Quality & precision</h1>
 
           <p class="hero-text">
-            Welcome to Exact Welding, where expertise meets innovation in welding.
-             With skilled artisans and advanced technology, we deliver superior quality and durability in every project.
-              Whether it's custom designs or structural welding, trust us for excellence in fabrication and repairs.
-               Let Exact Welding spark brilliance in your metalwork.
+            Welcome to Exact Welding, where expertise meets innovation in welding. We deliver superior quality and durability in every project. Whether it's custom designs or structural welding, trust us for excellence in fabrication and repairs. Let Exact Welding spark brilliance in your metalwork. Contact us or get a quote now and step into a world where every small piece is a step closer to a masterpiece
             
-            Book your appointment now and step into a world where every stell piece is a step closer to a masterpiece!
+            You have a project for us? Let’s get started by getting you in contact with our team.
           </p>
 
           <a href="#services" class="btn has-before">
@@ -249,7 +261,7 @@
                 </h3>
 
                 <p class="card-text">
-                  From concept to completion, we work closely with you to bring your vision to life. Whether you require intricate architectural elements, structural components, or specialized equipment, our team has the expertise to deliver exceptional results tailored to your specifications.
+                  From concept to completion, we work closely with you to bring your vision to life. Our team has the expertise to deliver exceptional results tailored to your specifications.
                 </p>
 
                 <a href="#" class="card-btn" aria-label="more">
@@ -267,11 +279,11 @@
                 </div>
 
                 <h3 class="h3">
-                  <a href="#" class="card-title">Heavy-duty structural welding</a>
+                  <a href="#" class="card-title">3D design</a>
                 </h3>
 
                 <p class="card-text">
-                  We excel in performing heavy-duty structural welding tasks, including the fabrication and installation of steel beams, columns, trusses, and other load-bearing components. Our welders are certified and experienced in a variety of welding techniques, ensuring the structural integrity and durability of your projects.
+                  You need help visualizing your project? Our designers are here to get your vision to the next step by using advanced 3D design.
                 </p>
 
                 <a href="#" class="card-btn" aria-label="more">
@@ -293,7 +305,7 @@
                 </h3>
 
                 <p class="card-text">
-                  Quality is paramount in everything we do. Our rigorous quality control measures ensure that every weld meets or exceeds industry standards for strength, integrity, and reliability. We use advanced inspection techniques and testing methods to verify the quality of our welds, providing you with peace of mind knowing that your structures are built to last.
+                  Quality is paramount in everything we do. Our rigorous quality control measures ensure that every weld meets or exceeds industry standards for strength, integrity, and reliability.
                 </p>
 
                 <a href="#" class="card-btn" aria-label="more">
@@ -521,39 +533,37 @@
 
             <div class="card-content">
 
-              <h2 class="h2 section-title">Make Appointment</h2>
+              <h2 class="h2 section-title">Get a quote</h2>
 
               <p class="section-text">
-                You have doubts, in our form you can submit a question along with your appointment, our team will reach out via text or the most convenient way to go over your questions.
+                You have a project for us? Let’s get started by getting you in contact with our team.
               </p>
 
-              <form action="" class="appoin-form">
-
+              <form action="https://api.web3forms.com/submit" method="POST" class="appoin-form">
+                <input type="hidden" name="access_key" value="60c53f05-d711-4044-b321-f655ec223a45">
                 <div class="input-wrapper">
-                  <input type="text" name="name" placeholder="Your Full Name" required class="input-field">
+                  <input id="nameInput" type="text" name="name" placeholder="Your Full Name" required class="input-field">
 
-                  <input type="email" name="email_address" placeholder="Email Address" required class="input-field">
+                  <input id="emailInput" type="email" name="email_address" placeholder="Email Address" required class="input-field">
                 </div>
 
                 <div class="input-wrapper">
-                  <input type="text" name="phone" placeholder="Phone Number" required class="input-field">
+                  <input id ="phoneInput" type="text" name="phone" placeholder="Phone Number" required class="input-field">
 
-                  <select name="category" class="input-field">
+                  <select id="categoryInput" name="category" class="input-field">
 
                     <option value="Select category">Select category</option>
-                    <option value="Beauty & spa">Beauty & spa</option>
-                    <option value="Body massage">Body massage</option>
-                    <option value="Shaving & Facial">Shaving & Facial</option>
-                    <option value="Hair Color">Hair Color</option>
-
+                    <option value="Quote">pricing</option>
+                    <option value="Question">question</option>
+                    <option value="Contract">contract offer</option>
                   </select>
                 </div>
 
-                <input type="date" name="date" required class="input-field date">
+                <input id="dateInput" type="date" name="date" required class="input-field date">
 
-                <textarea name="message" placeholder="Write Message" required class="input-field"></textarea>
+                <textarea id="messageInput" name="message" placeholder="Write Message" required class="input-field"></textarea>
 
-                <button type="submit" class="form-btn">
+                <button type="submit" class="form-btn" onclick="sendEmail()">
                   <span class="span">Appointment Now</span>
 
                   <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
@@ -690,7 +700,7 @@
                   <div class="card-date">
                     <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
 
-                    <time datetime="2024-01-03">February 3rd 2024</time>
+                    <time datetime="2024-01-03">April 3rd 2024</time>
                   </div>
                 </div>
 
@@ -751,7 +761,7 @@
             <li class="footer-list-item">
               <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
 
-              <a href="mailto:juanluisja261@gmail.com" class="contact-link">nohaLefebvre@example.com</a>
+              <a href="mailto:noahllapple415@gmail.com" class="contact-link">noahllapple415@gmail.com</a>
             </li>
 
           </ul>
